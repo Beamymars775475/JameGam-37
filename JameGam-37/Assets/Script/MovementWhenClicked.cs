@@ -27,7 +27,6 @@ public class MovementWhenClicked : MonoBehaviour
 
         if (isDragging)
         {
-            // Désactive temporairement les effets physiques sur l'objet pendant le déplacement
             rb.velocity = Vector2.zero;
             rb.isKinematic = true;
 
@@ -39,7 +38,6 @@ public class MovementWhenClicked : MonoBehaviour
         {
             isDragging = false;
 
-            // Réactive les effets physiques sur l'objet
             rb.isKinematic = false;
         }
     }
@@ -51,7 +49,6 @@ public class MovementWhenClicked : MonoBehaviour
             Rigidbody2D otherRb = collision.collider.GetComponent<Rigidbody2D>();
             if (otherRb != null)
             {
-                // Ajustez la force appliquée pendant la collision
                 Vector2 forceDirection = (otherRb.position - rb.position).normalized;
                 otherRb.AddForce(forceDirection * 2f, ForceMode2D.Impulse);
             }
