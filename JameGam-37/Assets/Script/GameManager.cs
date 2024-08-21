@@ -5,7 +5,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    
 
     public static GameManager instance {get; private set;}
 
@@ -15,7 +14,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-
+        currentLevel = 1;
         levelCount = new bool[15];
     }
 

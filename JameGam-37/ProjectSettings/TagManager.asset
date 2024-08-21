@@ -9,6 +9,8 @@ TagManager:
   - PlayButton
   - QuitButton
   - WinFlag
+  - MovableZone
+  - Rock
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Backgorund
-  - 
+  - MovableZone
   - 
   - 
   - 
@@ -45,6 +47,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 3282847055
+    locked: 0
+  - name: MovableZone
+    uniqueID: 3000213509
     locked: 0
   - name: Default
     uniqueID: 0
